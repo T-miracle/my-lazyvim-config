@@ -95,6 +95,8 @@ return {
       servers = {
         -- tsserver will be automatically installed with mason and loaded with lspconfig
         tsserver = {},
+        -- vue2
+        vetur = {},
       },
       -- you can do any additional lsp server setup here
       -- return true if you don't want this server to be setup with lspconfig
@@ -192,6 +194,10 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "vetur-vls",   -- Vue2
+        "tsserver",    -- JS/TS
+        "prettier",    -- 格式化
+        "eslint_d",    -- Lint
       },
     },
   },
