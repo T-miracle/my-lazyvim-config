@@ -16,33 +16,28 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   spec = {
-    -- add LazyVim and import its plugins
-    {
-      "T-miracle/LazyVim",
-      import = "lazyvim.plugins",
-      version = false,
-      branch = "main"
-    },
-    -- import/override with your plugins
+    -- 添加 LazyVim 并导入其插件
+    { "LazyVim/LazyVim", import = "lazyvim.plugins" },
+    -- 使用你的插件进行导入/覆盖
     { import = "plugins" },
   },
   defaults = {
-    -- By default, only LazyVim plugins will be lazy-loaded. Your custom plugins will load during startup.
-    -- If you know what you're doing, you can set this to `true` to have all your custom plugins lazy-loaded by default.
+    -- 默认情况下，只有 LazyVim 插件会延迟加载。你的自定义插件会在启动时加载。
+    -- 如果你清楚这项设置的影响，可以将其设为 `true`，让所有自定义插件默认延迟加载。
     lazy = false,
-    -- It's recommended to leave version=false for now, since a lot the plugin that support versioning,
-    -- have outdated releases, which may break your Neovim install.
-    version = false, -- always use the latest git commit
-    -- version = "*", -- try installing the latest stable version for plugins that support semver
+    -- 当前建议保持 version=false，因为许多支持版本管理的插件发布版本较旧，
+    -- 可能会导致你的 Neovim 环境出现问题。
+    version = false, -- 始终使用最新的 git 提交
+    -- version = "*", -- 对支持 semver 的插件尝试安装最新稳定版
   },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = {
-    enabled = true, -- check for plugin updates periodically
-    notify = false, -- notify on update
-  },                -- automatically check for plugin updates
+    enabled = true, -- 定期检查插件更新
+    notify = false, -- 更新时不通知
+  },                -- 自动检查插件更新
   performance = {
     rtp = {
-      -- disable some rtp plugins
+      -- 禁用部分 rtp 插件
       disabled_plugins = {
         "gzip",
         -- "matchit",
