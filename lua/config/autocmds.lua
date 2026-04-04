@@ -1,8 +1,8 @@
--- Autocmds are automatically loaded on the VeryLazy event
--- Default autocmds that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
+-- Autocmd 会在 VeryLazy 事件时自动加载
+-- 默认已设置的 autocmd：https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/autocmds.lua
 --
--- Add any additional autocmds here
--- with `vim.api.nvim_create_autocmd`
+-- 在这里添加额外的 autocmd
+-- 使用 `vim.api.nvim_create_autocmd`
 --
--- Or remove existing autocmds by their group name (which is prefixed with `lazyvim_` for the defaults)
--- e.g. vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
+-- 或通过组名移除已有的 autocmd（默认组名前缀为 `lazyvim_`）
+-- 例如：vim.api.nvim_del_augroup_by_name("lazyvim_wrap_spell")
