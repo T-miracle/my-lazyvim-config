@@ -9,5 +9,22 @@ return {
       opts.options.always_show_bufferline = true
       return opts
     end,
+  },
+  {
+    "folke/snacks.nvim",
+    opts = {
+      indent = {
+        chunk = {
+          enabled = true, -- ⚠️ 必须开启
+          char = {
+            corner_top = "┌",
+            corner_bottom = "└",
+            horizontal = "─",
+            vertical = "│",
+            arrow = "→", -- 👉 这里就是“函数箭头”
+          },
+        },
+      },
+    },
   }
 }
