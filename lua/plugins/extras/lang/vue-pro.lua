@@ -26,10 +26,10 @@ return {
     opts = {
       servers = {
         vue_ls = {
-          enabled = true
+          enabled = true,
         },
         vtsls = {
-          enabled = true
+          enabled = true,
         },
         cssls = {
           enabled = true,
